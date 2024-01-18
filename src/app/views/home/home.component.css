@@ -1,0 +1,77 @@
+/* Estilos para la sección homeSelection */
+.homeSelection {
+    background: linear-gradient(135deg, #acb6f6, #71aff5,#2b0390d0); /* Fondo degradado de colores */
+    text-align: center;
+    padding: 20px;
+    background-size: 400% 400%; 
+    animation: gradientMovement 15s infinite; 
+}
+
+/* Estilos para el título en la sección */
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px; 
+    margin-bottom: 20px;
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    animation: cinematicTitle 2s infinite alternate; 
+}
+
+/* Animación para el movimiento del título */
+@keyframes cinematicTitle {
+    0% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(2px); 
+    }
+}
+
+
+/* Estilos para el subtítulo en la sección */
+.subtitulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #fff; 
+}
+
+/* Estilos para el contenedor de las tarjetas */
+.containerCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos para las tarjetas */
+app-card {
+    background-color: #ffffffe5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Animación para el movimiento del fondo degradado */
+@keyframes gradientMovement {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+.paginador {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px; 
+    background-color: #edf0f385;
+    font-weight: bold; 
+    
+  }

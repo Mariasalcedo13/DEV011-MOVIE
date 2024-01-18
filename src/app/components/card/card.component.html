@@ -1,0 +1,9 @@
+
+<div class="card-lineal">
+<div class="card" *ngIf="peliculas">
+  <img [src]="'https://image.tmdb.org/t/p/w500/' + peliculas.poster_path" alt="{{ peliculas.title }}">
+    <h3>{{ peliculas.title }}</h3>
+    <p>{{ peliculas.release_date | date }}</p>
+    <p *ngIf="peliculas.genre_ids"></p>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+
+<form>
+  <label for="genre">Filtrar por Género:</label>
+  <select id="genre" name="selectedGenre" [(ngModel)]="selectedGenre" (change)="onGenreChange($event)">
+    <option value="">Todos</option>
+    <option *ngFor="let genre of genresService" [value]="genre">{{ genre }}</option>
+  </select>
+</form>
+
+

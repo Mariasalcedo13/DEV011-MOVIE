@@ -1,0 +1,15 @@
+<section class="homeSelection">
+  
+    <h1 class="title">CINESWIFT</h1>
+    <p class="subtitulo">Emociones en alta definición, historias que rompen esquemas.</p>
+    <app-filter ></app-filter>
+    <div class="containerCard">
+      <app-card *ngFor="let movie of movieList | paginate: { itemsPerPage: 6, currentPage: page }" 
+      [peliculas]="movie" >
+      </app-card>
+    </div>
+   
+  </section>
+  
+  <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"nextLabel="Siguiente" class="paginador"></pagination-controls>
+  <app-footer></app-footer>
