@@ -9,6 +9,7 @@ export interface peliculas {
 export interface Genres {
   id: number,
   name: string
+  
 }
 
 export interface views {

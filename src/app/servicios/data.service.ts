@@ -9,29 +9,29 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DataService {
-  private apiKey = 'a46633e219c148c1537e43116e6e8b9e'; 
-  private apiUrl = 'https://api.themoviedb.org/3';
-  private discoverEndpoint = '/discover/movie';
-  private language = 'en-US';
-  private genresEndpoint = '/genre/movie/list';
+  private API_KEY = 'a46633e219c148c1537e43116e6e8b9e';
+  private API_URL = 'https://api.themoviedb.org/3';
+  private DISCOVER_ENDPOINT = '/discover/movie';
+  private LANGUAGE = 'en-US';
+  private GENRES_ENDPOINT = '/genre/movie/list';
+  
 
   constructor(private http: HttpClient) {}
 
   public getMovies(page: number, genreId?: string): Observable<any> {
-    let url = `${this.apiUrl}${this.discoverEndpoint}`;
+    let url = `${this.API_URL}${this.DISCOVER_ENDPOINT}`;
     const params: Record<string, string> = {
       include_adult: 'false',
       include_video: 'false',
-      language: this.language,
+      language: this.LANGUAGE,
       page: page.toString(),
       sort_by: 'popularity.desc',
-      api_key: this.apiKey,
+      api_key: this.API_KEY,
       
     };
 
-    if (genreId) {
-      params['with_genres'] = genreId;
-    }
+    genreId && (params['with_genres'] = genreId);
+
 
     return this.http.get<any>(url, { params });
   }
@@ -54,10 +54,10 @@ export class DataService {
     );
   }
   public getGenres(): Observable<string[]> {
-    const url = `${this.apiUrl}${this.genresEndpoint}`;
+    const url = `${this.API_URL}${this.GENRES_ENDPOINT}`;
     const params: Record<string, string> = {
-      language: this.language,
-      api_key: this.apiKey,
+      language: this.LANGUAGE,
+      api_key: this.API_KEY,
     };
 
     return this.http.get<any>(url, { params }).pipe(

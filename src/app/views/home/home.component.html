@@ -2,7 +2,7 @@
   
     <h1 class="title">CINESWIFT</h1>
     <p class="subtitulo">Emociones en alta definición, historias que rompen esquemas.</p>
-    <app-filter ></app-filter>
+    <app-filter ></app-filter> <app-sort-by></app-sort-by>
     <div class="containerCard">
       <app-card *ngFor="let movie of movieList | paginate: { itemsPerPage: 6, currentPage: page }" 
       [peliculas]="movie" >

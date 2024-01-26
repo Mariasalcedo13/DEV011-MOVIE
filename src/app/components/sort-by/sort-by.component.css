@@ -1,0 +1,14 @@
+#orderBy {
+    width: auto;
+    padding: 0 15px 0 15px;
+    font-size: 20px;
+    font-family: ligth;
+    border-radius: 10px;
+    opacity: 0.8;
+    }
+
+    .filterOrder{
+        width: 150px;
+        height: 150px;
+        color: aliceblue;
+    }
