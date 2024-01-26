@@ -1,10 +1,15 @@
+<div class="grid-layout">
+  <div class="filters">
+    <form class="filtersContainer">
+      <label for="genre">Filter by genre</label>
+      <select id="genre" name="selectedGenre" [(ngModel)]="selectedGenre" (ngModelChange)="onGenreChange()">
+        <option *ngFor="let genre of genresService" [value]="genre">{{ genre }}</option>
+      </select>
+    </form>
+  </div>
+</div>
 
-<form>
-  <label for="genre">Filtrar por Género:</label>
-  <select id="genre" name="selectedGenre" [(ngModel)]="selectedGenre" (change)="onGenreChange($event)">
-    <option value="">Todos</option>
-    <option *ngFor="let genre of genresService" [value]="genre">{{ genre }}</option>
-  </select>
-</form>
+
+
 
 

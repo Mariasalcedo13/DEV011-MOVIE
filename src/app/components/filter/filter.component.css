@@ -1,49 +1,23 @@
-form {
-    margin-bottom: 20px;
-  }
+.filters{
+  width: 150px;
+  height: 150px;
+  color: aliceblue;
   
-  label {
-    font-weight: bold;
-    margin-right: 10px;
-    display: inline-block;
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #b8bcbd; 
-    border: 1px solid #2980b9; 
-    border-radius: 3px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
-    cursor: pointer;
-  }
   
-  label:hover {
-    background-color: #a3a3f0; 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
-  }
-  
-  select {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  select:hover,
-  select:focus {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Estilo para el option "Todos" */
-  option[value=""] {
-    font-style: italic;
-    color: #555;
-  }
-  
-  /* Estilo para los demás option */
-  option {
-    color: #000;
+
+}
+.grid-layout{
+  display: grid;
+  grid-template-columns: 40% 60% ;
+  margin: 0;
+  justify-items: center;
+}
+#genre {
+  width: auto;
+  padding: 0 15px 0 15px;
+  font-size: 20px;
+  font-family: ligth;
+  border-radius: 10px;
+  opacity: 0.8;
   }
   

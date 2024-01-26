@@ -14,9 +14,9 @@ export class HomeComponent implements OnInit {
   movieList: peliculas[] = [];
   public page!: number;
   public selectedGenre: string | null = null;
-  public genres: string[] = [];
+  
 
-  constructor(private dataService: DataService, private cdRef: ChangeDetectorRef) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
     this.getData();
@@ -40,11 +40,14 @@ export class HomeComponent implements OnInit {
 
   getMoviesByGenre(): void {
     if (this.selectedGenre) {
+      console.log('Selected Genre:', this.selectedGenre);
       this.dataService.getMoviesByGenre(this.page, this.selectedGenre).subscribe((moviesData: peliculas[]) => {
         console.log(`Movies Data for ${this.selectedGenre}:`, moviesData);
-       this.movieList = moviesData;
-     });
- }
+        this.movieList = moviesData;
+      });
+    
+  }
+  
   }
 
   // loadGenres(): void {

@@ -1,1 +1,10 @@
-<p>sort-by works!</p>
+<div class="filterOrder">
+  <label for="orderBy">Order by:</label>
+  <select name="orderBy" [(ngModel)]="selectedOptionOrder" (change)="applyOrder()">
+    <option value="popularity.desc" selected>Popularity Desc</option>
+    <option value="popularity.asc">Popularity Asc</option>
+    <option value="primary_release_date.asc">Release date Asc</option>
+    <option value="primary_release_date.desc">Release date Desc</option>
+ </select>
+</div>
+
